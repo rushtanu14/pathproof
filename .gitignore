@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+test-results/
+playwright-report/
+.DS_Store
+*.tsbuildinfo
+.env*
+.playwright-cli/
+docs/media/raw/
+docs/media/*.mp4
+docs/media/render.log

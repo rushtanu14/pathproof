@@ -1,0 +1,84 @@
+1
+00:00:00,122 --> 00:00:08,125
+A decision form can strand someone on a missing route.
+PathProof checks a finite model and shows the exact failure.
+
+2
+00:00:08,125 --> 00:00:16,142
+This equipment-loan model has three fixed true/false inputs.
+That creates eight combinations to check.
+
+3
+00:00:16,142 --> 00:00:24,234
+The input is plain JSON: named inputs, nodes and conditions.
+No scripts or arbitrary expressions execute.
+
+4
+00:00:24,234 --> 00:00:32,235
+Validate the model, then run all eight combinations.
+Six terminate; two are missing a next route.
+
+5
+00:00:32,235 --> 00:00:40,237
+Two finding groups summarize the problem:
+a missing route and a training node no run visits.
+
+6
+00:00:40,237 --> 00:00:48,239
+Here is a counterexample: member=true, training=false.
+The run stops at “Training complete?” with no matching edge.
+
+7
+00:00:48,239 --> 00:00:56,240
+Replay the path one step at a time. The fixed inputs
+explain why this member cannot reach a terminal.
+
+8
+00:00:56,241 --> 00:01:04,244
+Inspect the actual conditions. The model has a route
+for trained members, but none for training=false.
+
+9
+00:01:04,244 --> 00:01:12,245
+The example repair adds training=false → Book training.
+This is a real model edit, so the old results are cleared.
+
+10
+00:01:12,246 --> 00:01:20,248
+Run every scenario again. All eight now terminate,
+and every modeled node is visited.
+
+11
+00:01:20,248 --> 00:01:28,250
+The findings panel is clear. This conclusion covers
+only this finite model and its fixed boolean inputs.
+
+12
+00:01:28,250 --> 00:01:36,251
+Inspect scenario 2 again: the untrained member now
+reaches Book training instead of stopping at the question.
+
+13
+00:01:36,251 --> 00:01:44,252
+Export the audit and the model. The Markdown audit
+includes findings, traces and the complete JSON model.
+
+14
+00:01:44,252 --> 00:01:52,253
+A second built-in example has a referral cycle.
+Load it and run the same exhaustive check.
+
+15
+00:01:52,253 --> 00:02:00,254
+The replay repeats a node under the same fixed inputs.
+That is evidence of a cycle inside this model.
+
+16
+00:02:00,255 --> 00:02:08,256
+Return to the complete borrowing flow and rerun it.
+The saved export preserves the repair and its evidence.
+
+17
+00:02:08,256 --> 00:02:16,258
+Model → check → trace → repair → rerun. This does not
+test a live form, timing, services or unmodeled behavior.

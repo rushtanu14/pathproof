@@ -1,0 +1,65 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1440
+PlayResY: 1080
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Arial,29,&H00FFFFFF,&H00FFFFFF,&H00151C26,&H00151C26,0,0,0,0,100,100,0,0,1,0,0,2,70,70,29,1
+Style: Chapter,Arial,22,&H0056DCEC,&H0056DCEC,&H00151C26,&H00151C26,-1,0,0,0,100,100,0,0,1,0,0,7,34,34,16,1
+Style: Count,Arial,18,&H00FFFFFF,&H00FFFFFF,&H00151C26,&H00151C26,0,0,0,0,100,100,0,0,1,0,0,9,34,34,18,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.12,0:00:08.12,Caption,,0,0,0,,A decision form can strand someone on a missing route.\NPathProof checks a finite model and shows the exact failure.
+Dialogue: 0,0:00:00.12,0:00:08.12,Chapter,,0,0,0,,PATHPROOF   ·   01 / THE PROBLEM
+Dialogue: 0,0:00:00.12,0:00:08.12,Count,,0,0,0,,01 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:00:08.12,0:00:16.14,Caption,,0,0,0,,This equipment-loan model has three fixed true/false inputs.\NThat creates eight combinations to check.
+Dialogue: 0,0:00:08.12,0:00:16.14,Chapter,,0,0,0,,PATHPROOF   ·   02 / DEFINE THE INPUTS
+Dialogue: 0,0:00:08.12,0:00:16.14,Count,,0,0,0,,02 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:00:16.14,0:00:24.23,Caption,,0,0,0,,The input is plain JSON: named inputs, nodes and conditions.\NNo scripts or arbitrary expressions execute.
+Dialogue: 0,0:00:16.14,0:00:24.23,Chapter,,0,0,0,,PATHPROOF   ·   02 / DEFINE THE INPUTS
+Dialogue: 0,0:00:16.14,0:00:24.23,Count,,0,0,0,,03 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:00:24.23,0:00:32.23,Caption,,0,0,0,,Validate the model, then run all eight combinations.\NSix terminate; two are missing a next route.
+Dialogue: 0,0:00:24.23,0:00:32.23,Chapter,,0,0,0,,PATHPROOF   ·   03 / RUN EVERY SCENARIO
+Dialogue: 0,0:00:24.23,0:00:32.23,Count,,0,0,0,,04 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:00:32.23,0:00:40.23,Caption,,0,0,0,,Two finding groups summarize the problem:\Na missing route and a training node no run visits.
+Dialogue: 0,0:00:32.23,0:00:40.23,Chapter,,0,0,0,,PATHPROOF   ·   04 / FIND THE FAILURE
+Dialogue: 0,0:00:32.23,0:00:40.23,Count,,0,0,0,,05 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:00:40.23,0:00:48.23,Caption,,0,0,0,,Here is a counterexample: member=true, training=false.\NThe run stops at “Training complete?” with no matching edge.
+Dialogue: 0,0:00:40.23,0:00:48.23,Chapter,,0,0,0,,PATHPROOF   ·   04 / FIND THE FAILURE
+Dialogue: 0,0:00:40.23,0:00:48.23,Count,,0,0,0,,06 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:00:48.23,0:00:56.24,Caption,,0,0,0,,Replay the path one step at a time. The fixed inputs\Nexplain why this member cannot reach a terminal.
+Dialogue: 0,0:00:48.23,0:00:56.24,Chapter,,0,0,0,,PATHPROOF   ·   05 / REPLAY THE EVIDENCE
+Dialogue: 0,0:00:48.23,0:00:56.24,Count,,0,0,0,,07 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:00:56.24,0:01:04.24,Caption,,0,0,0,,Inspect the actual conditions. The model has a route\Nfor trained members, but none for training=false.
+Dialogue: 0,0:00:56.24,0:01:04.24,Chapter,,0,0,0,,PATHPROOF   ·   05 / REPLAY THE EVIDENCE
+Dialogue: 0,0:00:56.24,0:01:04.24,Count,,0,0,0,,08 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:01:04.24,0:01:12.24,Caption,,0,0,0,,The example repair adds training=false → Book training.\NThis is a real model edit, so the old results are cleared.
+Dialogue: 0,0:01:04.24,0:01:12.24,Chapter,,0,0,0,,PATHPROOF   ·   06 / REPAIR THE MODEL
+Dialogue: 0,0:01:04.24,0:01:12.24,Count,,0,0,0,,09 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:01:12.24,0:01:20.24,Caption,,0,0,0,,Run every scenario again. All eight now terminate,\Nand every modeled node is visited.
+Dialogue: 0,0:01:12.24,0:01:20.24,Chapter,,0,0,0,,PATHPROOF   ·   07 / RERUN, THEN CONCLUDE
+Dialogue: 0,0:01:12.24,0:01:20.24,Count,,0,0,0,,10 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:01:20.24,0:01:28.25,Caption,,0,0,0,,The findings panel is clear. This conclusion covers\Nonly this finite model and its fixed boolean inputs.
+Dialogue: 0,0:01:20.24,0:01:28.25,Chapter,,0,0,0,,PATHPROOF   ·   07 / RERUN, THEN CONCLUDE
+Dialogue: 0,0:01:20.24,0:01:28.25,Count,,0,0,0,,11 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:01:28.25,0:01:36.25,Caption,,0,0,0,,Inspect scenario 2 again: the untrained member now\Nreaches Book training instead of stopping at the question.
+Dialogue: 0,0:01:28.25,0:01:36.25,Chapter,,0,0,0,,PATHPROOF   ·   07 / RERUN, THEN CONCLUDE
+Dialogue: 0,0:01:28.25,0:01:36.25,Count,,0,0,0,,12 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:01:36.25,0:01:44.25,Caption,,0,0,0,,Export the audit and the model. The Markdown audit\Nincludes findings, traces and the complete JSON model.
+Dialogue: 0,0:01:36.25,0:01:44.25,Chapter,,0,0,0,,PATHPROOF   ·   08 / EXPORT THE AUDIT
+Dialogue: 0,0:01:36.25,0:01:44.25,Count,,0,0,0,,13 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:01:44.25,0:01:52.25,Caption,,0,0,0,,A second built-in example has a referral cycle.\NLoad it and run the same exhaustive check.
+Dialogue: 0,0:01:44.25,0:01:52.25,Chapter,,0,0,0,,PATHPROOF   ·   09 / A SECOND FAILURE MODE
+Dialogue: 0,0:01:44.25,0:01:52.25,Count,,0,0,0,,14 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:01:52.25,0:02:00.25,Caption,,0,0,0,,The replay repeats a node under the same fixed inputs.\NThat is evidence of a cycle inside this model.
+Dialogue: 0,0:01:52.25,0:02:00.25,Chapter,,0,0,0,,PATHPROOF   ·   09 / A SECOND FAILURE MODE
+Dialogue: 0,0:01:52.25,0:02:00.25,Count,,0,0,0,,15 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:02:00.25,0:02:08.25,Caption,,0,0,0,,Return to the complete borrowing flow and rerun it.\NThe saved export preserves the repair and its evidence.
+Dialogue: 0,0:02:00.25,0:02:08.25,Chapter,,0,0,0,,PATHPROOF   ·   10 / KEEP THE VERIFIED RESULT
+Dialogue: 0,0:02:00.25,0:02:08.25,Count,,0,0,0,,16 / 17  |  SOUND-OFF DEMO
+Dialogue: 0,0:02:08.25,0:02:16.25,Caption,,0,0,0,,Model → check → trace → repair → rerun. This does not\Ntest a live form, timing, services or unmodeled behavior.
+Dialogue: 0,0:02:08.25,0:02:16.25,Chapter,,0,0,0,,PATHPROOF   ·   10 / THE HONEST BOUNDARY
+Dialogue: 0,0:02:08.25,0:02:16.25,Count,,0,0,0,,17 / 17  |  SOUND-OFF DEMO

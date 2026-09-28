@@ -1,0 +1,116 @@
+{
+  "app": "pathproof",
+  "recordedAt": "2026-09-27T01:10:20.323Z",
+  "source": "http://127.0.0.1:4182",
+  "raw": "/Users/rushil/cprojects/Hackathons/pathproof/docs/media/raw/page@4cb892de8a598e5106b8e730e5cbe937.webm",
+  "trim": 1.828,
+  "duration": 136.258,
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "scenes": [
+    {
+      "chapter": "01 / THE PROBLEM",
+      "caption": "A decision form can strand someone on a missing route.\nPathProof checks a finite model and shows the exact failure.",
+      "start": 0.122,
+      "end": 8.125
+    },
+    {
+      "chapter": "02 / DEFINE THE INPUTS",
+      "caption": "This equipment-loan model has three fixed true/false inputs.\nThat creates eight combinations to check.",
+      "start": 8.125,
+      "end": 16.142
+    },
+    {
+      "chapter": "02 / DEFINE THE INPUTS",
+      "caption": "The input is plain JSON: named inputs, nodes and conditions.\nNo scripts or arbitrary expressions execute.",
+      "start": 16.142,
+      "end": 24.234
+    },
+    {
+      "chapter": "03 / RUN EVERY SCENARIO",
+      "caption": "Validate the model, then run all eight combinations.\nSix terminate; two are missing a next route.",
+      "start": 24.234,
+      "end": 32.235
+    },
+    {
+      "chapter": "04 / FIND THE FAILURE",
+      "caption": "Two finding groups summarize the problem:\na missing route and a training node no run visits.",
+      "start": 32.235,
+      "end": 40.237
+    },
+    {
+      "chapter": "04 / FIND THE FAILURE",
+      "caption": "Here is a counterexample: member=true, training=false.\nThe run stops at “Training complete?” with no matching edge.",
+      "start": 40.237,
+      "end": 48.239
+    },
+    {
+      "chapter": "05 / REPLAY THE EVIDENCE",
+      "caption": "Replay the path one step at a time. The fixed inputs\nexplain why this member cannot reach a terminal.",
+      "start": 48.239,
+      "end": 56.24
+    },
+    {
+      "chapter": "05 / REPLAY THE EVIDENCE",
+      "caption": "Inspect the actual conditions. The model has a route\nfor trained members, but none for training=false.",
+      "start": 56.241,
+      "end": 64.244
+    },
+    {
+      "chapter": "06 / REPAIR THE MODEL",
+      "caption": "The example repair adds training=false → Book training.\nThis is a real model edit, so the old results are cleared.",
+      "start": 64.244,
+      "end": 72.245
+    },
+    {
+      "chapter": "07 / RERUN, THEN CONCLUDE",
+      "caption": "Run every scenario again. All eight now terminate,\nand every modeled node is visited.",
+      "start": 72.246,
+      "end": 80.248
+    },
+    {
+      "chapter": "07 / RERUN, THEN CONCLUDE",
+      "caption": "The findings panel is clear. This conclusion covers\nonly this finite model and its fixed boolean inputs.",
+      "start": 80.248,
+      "end": 88.25
+    },
+    {
+      "chapter": "07 / RERUN, THEN CONCLUDE",
+      "caption": "Inspect scenario 2 again: the untrained member now\nreaches Book training instead of stopping at the question.",
+      "start": 88.25,
+      "end": 96.251
+    },
+    {
+      "chapter": "08 / EXPORT THE AUDIT",
+      "caption": "Export the audit and the model. The Markdown audit\nincludes findings, traces and the complete JSON model.",
+      "start": 96.251,
+      "end": 104.252
+    },
+    {
+      "chapter": "09 / A SECOND FAILURE MODE",
+      "caption": "A second built-in example has a referral cycle.\nLoad it and run the same exhaustive check.",
+      "start": 104.252,
+      "end": 112.253
+    },
+    {
+      "chapter": "09 / A SECOND FAILURE MODE",
+      "caption": "The replay repeats a node under the same fixed inputs.\nThat is evidence of a cycle inside this model.",
+      "start": 112.253,
+      "end": 120.254
+    },
+    {
+      "chapter": "10 / KEEP THE VERIFIED RESULT",
+      "caption": "Return to the complete borrowing flow and rerun it.\nThe saved export preserves the repair and its evidence.",
+      "start": 120.255,
+      "end": 128.256
+    },
+    {
+      "chapter": "10 / THE HONEST BOUNDARY",
+      "caption": "Model → check → trace → repair → rerun. This does not\ntest a live form, timing, services or unmodeled behavior.",
+      "start": 128.256,
+      "end": 136.258
+    }
+  ]
+}
